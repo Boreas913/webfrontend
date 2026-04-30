@@ -1,98 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[Park Name]</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="js/main.js"></script>
+    <title>NPS PARK DEMO SITE</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="./js/main.js" defer></script>
   </head>
   <body>
-    <p class="disclaimer">
-      This is not a real NPS website. It is an educational exercise. If you
-      landed here by accident, to find the real website visit
-      <a href="parkUrl">[park name]</a>
-    </p>
-    <div class="skip-links" aria-label="short-cut links" role="navigation">
-      <ul>
-        <li>
-          <a
-            href="#global-nav-toggle"
-            aria-label="Skip to global NPS navigation"
-            >Skip to global NPS navigation</a
-          >
-        </li>
-        <li>
-          <a href="#local-nav" aria-label="Skip to this park navigation"
-            >Skip to this park navigation</a
-          >
-        </li>
-        <li>
-          <a href="#main" aria-label="Skip to the main content"
-            >Skip to the main content</a
-          >
-        </li>
-        <li>
-          <a
-            href="#park-footer"
-            aria-label="Skip to this park information section"
-            >Skip to this park information section</a
-          >
-        </li>
-      </ul>
-    </div>
-    <header>
-      <section class="global-header">
-        <a href="index.html" class="site-title"
-          ><span class="logo" role="presentation"></span>
-          <span>National Park Service</span></a
-        >
-        <div class="global-header__right">
-          <a class="search-icon" href="#park-footer">
-            <svg class="icon">
-              <use xlink:href="/images/sprite.symbol.svg#search"></use>
-            </svg>
-            <span class="visually-hidden">Search</span>
-          </a>
-          <button id="global-nav-toggle">
-            <svg class="icon">
-              <use xlink:href="/images/sprite.symbol.svg#menu"></use>
-            </svg>
-            <span class="visually-hidden">Open</span> Menu
-          </button>
-        </div>
-        <nav class="global-nav">
-          <h2 class="global-nav__section-heading">Explore this Park</h2>
-          <ul class="global-nav__list">
+    <div id="content">
+      <header>
+        <h1>US NATIONAL PARKS</h1>
+        <nav>
+          <p id="header-menu-trigger">≡ MENU</p>
+
+          <div id="header-menu-options" class="is-hidden">
+            <ul>
+              <li>INFO</li>
+              <li>ALERTS</li>
+              <li>MAPS</li>
+              <li>EVENTS</li>
+              <li>FEES</li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section id="hero">
+          <img id="heroImage" src="/images/us-map.png" alt="Map of US" />
+        </section>
+        <section id="parkInfo">
+          <h2 id="parkName">Park Name</h2>
+          <div>
+            <h2 id="parkType">Park Type</h2>
+            <h2 id="parkStates">Park States</h2>
+          </div>
+        </section>
+        <section id="parkMenu">
+          <ul>
             <li>
-              <div class="global-nav__split-button">
-                <a href="#">Plan Your Visit</a>
-                <button class="global-nav__split-button__toggle">
-                  <span class="visually-hidden"
-                    >Toggle submenu for Plan Your Visit</span
-                  >
-                  <svg class="icon" role="presentation" focusable="false">
-                    <use xlink:href="/images/sprite.symbol.svg#arrow"></use>
-                  </svg>
-                </button>
-              </div>
+              <p>INFO</p>
+              <p>
+                <svg><use href="/images/sprite.svg#info"></use></svg>
+              </p>
+            </li>
+            <li>
+              <p>ALERTS</p>
+              <p>
+                <svg>
+                  <use href="/images/sprite.svg#safety-caution-alerts"></use>
+                </svg>
+              </p>
+            </li>
+            <li>
+              <p>MAPS</p>
+              <p>
+                <svg><use href="/images/sprite.svg#location_on"></use></svg>
+              </p>
+            </li>
+            <li>
+              <p>EVENTS</p>
+              <p>
+                <svg><use href="/images/sprite.svg#event"></use></svg>
+              </p>
+            </li>
+            <li>
+              <p>FEES</p>
+              <p>
+                <svg><use href="/images/sprite.svg#passes-and-fees"></use></svg>
+              </p>
             </li>
           </ul>
-        </nav>
-      </section>
-      <section id="park-header">
-        <a href="#">
-          <span>Info</span>
-          <svg class="icon" role="presentation" focusable="false">
-            <use xlink:href="/images/sprite.symbol.svg#info"></use>
-          </svg>
-        </a>
-        <svg class="icon" role="presentation" focusable="false">
-          <use xlink:href="/images/sprite.symbol.svg#alert"></use>
-        </svg>
-      </section>
-    </header>
-    <main id="main"></main>
-    <footer id="park-footer"></footer>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2026 WDD 231 Sample Project</p>
+      </footer>
+    </div>
   </body>
 </html>
