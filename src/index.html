@@ -18,7 +18,7 @@
             <ul>
               <li>INFO</li>
               <li>ALERTS</li>
-              <li>MAPS</li>
+              <li id="header-maps-link">MAPS</li>
               <li>EVENTS</li>
               <li>FEES</li>
             </ul>
@@ -52,7 +52,7 @@
                 </svg>
               </p>
             </li>
-            <li>
+            <li id="park-maps-link">
               <p>MAPS</p>
               <p>
                 <svg><use href="/images/sprite.svg#location_on"></use></svg>
@@ -71,6 +71,22 @@
               </p>
             </li>
           </ul>
+        </section>
+        <section id="promotions">
+          <h2>Park Promotions:</h2>
+          <p id="promotion-message"></p>
+        </section>
+        <section id="map-modal" class="is-hidden">
+          <div id="map-modal-content">
+            <button id="map-modal-close">X</button>
+            <iframe
+              src="https://www.google.com/maps?q=Old+Faithful+Yellowstone+National+Park&output=embed"
+              width="100%"
+              height="420"
+              style="border: 0"
+              loading="lazy">
+            </iframe>
+          </div>
         </section>
       </main>
       <footer>

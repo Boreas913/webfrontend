@@ -23,25 +23,31 @@ header{
     justify-content: space-between;
     background-color: var(--header-footer-color);
     color: white;
+    position: relative;
+    z-index: 20;
 }
+
 header h1 {
   padding: 0.5rem;
 }
 
-footer{
-    border:var(--accent-color);
+footer {
+    border-top: 4px solid var(--accent-color); 
     background-color: var(--header-footer-color);
     display: flex;
     justify-content: center;
     color: white;
+    padding: 1rem;
 }
 
-#parkInfo{
-    border: var(--header-footer-color);
+#parkInfo {
+    border: 1px solid var(--header-footer-color);
     background-color: var(--accent-color);
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-top: -60px;
+    position: relative; 
+    z-index: 15;
 }
 
 header nav {
@@ -52,11 +58,11 @@ header nav {
 }
 
 #header-menu-options {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 10;
-  background-color: var(--header-color);  
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 30;
+    background-color: var(--header-footer-color); 
 }
 
 #header-menu-options ul {
@@ -107,4 +113,53 @@ header nav {
 svg{
     width: 50px;
     height: 50px;
+}
+#promotions {
+  border: 1px solid black;
+  background-color: #f3f1ea;
+  padding: 1rem;
+}
+
+#promotions h2,
+#promotions p {
+  margin: 0.25rem 0;
+}
+
+#header-maps-link,
+#park-maps-link {
+  cursor: pointer;
+}
+
+#map-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Important: this beats #map-modal display:flex */
+#map-modal.is-hidden {
+  display: none;
+}
+
+#map-modal-content {
+  background-color: white;
+  border: 1px solid black;
+  width: min(900px, 95vw);
+  padding: 0.75rem;
+}
+
+#map-modal-close {
+  float: right;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index:1010;
+  padding: 5px 10px;
 }
