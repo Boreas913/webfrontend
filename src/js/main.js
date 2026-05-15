@@ -1,3 +1,4 @@
+const MENU_DATA_URL = "/data/menu.json";
 function loadParkData() {
   document.getElementById("parkName").textContent = "Yellowstone";
   document.getElementById("parkType").textContent = "National Park";
@@ -78,6 +79,69 @@ function setupMapModalAndPromotions() {
   }
 }
 
+function buildHeaderMenuWithThen() {
+  // Find the header menu <ul>.
+  const headerMenuList = document.querySelector("#header-menu-options ul");
+  if (!headerMenuList) return;
+
+  // Fetch JSON and convert response to JS object.
+  fetch(MENU_DATA_URL)
+    .then((response) => response.json())
+    .then((data) => {
+      // Remove old markup before rebuilding.
+      headerMenuList.innerHTML = "";
+
+      // Create <li> items from the JSON array.
+      data.menu.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item.name;
+        li.dataset.menuId = item.id;
+        li.dataset.href = item.href;
+
+        // Keep this ID for existing map modal behavior.
+        if (item.id === "maps") li.id = "header-maps-link";
+
+        headerMenuList.appendChild(li);
+      });
+    });
+}
+async function buildParkMenuWithAsyncAwait() {
+  // Find the park menu <ul>.
+  const parkMenuList = document.querySelector("#park-menu ul");
+  if (!parkMenuList) return;
+
+  // Fetch and parse JSON with async/await.
+  const response = await fetch(MENU_DATA_URL);
+  const data = await response.json();
+
+  // Build the entire menu in one pass.
+  parkMenuList.innerHTML = data.menu
+    .map(
+      (item) => `
+        <li
+          ${item.id === "maps" ? 'id="park-maps-link"' : ""}
+          data-menu-id="${item.id}"
+          data-href="${item.href}">
+          <p>${item.name}</p>
+          <p>
+            <svg>
+              <use href="${item.iconUrl}"></use>
+            </svg>
+          </p>
+        </li>
+      `
+    )
+    .join("");
+}
+async function init() {
+  loadParkData();
+  buildHeaderMenuWithThen();
+  await buildParkMenuWithAsyncAwait();
+  addEventListeners();
+  setupMapModalAndPromotions();
+}
+
+init();
 loadParkData();
 addEventListeners();
 setupMapModalAndPromotions();
