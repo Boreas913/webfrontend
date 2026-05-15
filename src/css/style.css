@@ -1,53 +1,33 @@
-:root{
-    --header-footer-color: #344E41;
-    --accent-color: #588157;
-    --background-color: #DAD7CD;
+:root {
+  --header-color: #344e41;
+  --accent-color: #a3b18a;
+  --background-color: #dad7cd;
 }
 
-*{
-    margin: 0;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  background-color: var(--background-color);
+  margin: 0;
 }
 
-body{
-    background-color: var(--background-color);
+#content {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: white;
+  height: 100vh;
 }
 
-#content{
-    max-width: 1024px;
-    background-color: white;
-    margin: 0 auto; /*centers content*/
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--header-footer-color);
-    color: white;
-    position: relative;
-    z-index: 20;
+header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  background-color: var(--header-color);
+  color: white;
 }
 
 header h1 {
   padding: 0.5rem;
-}
-
-footer {
-    border-top: 4px solid var(--accent-color); 
-    background-color: var(--header-footer-color);
-    display: flex;
-    justify-content: center;
-    color: white;
-    padding: 1rem;
-}
-
-#parkInfo {
-    border: 1px solid var(--header-footer-color);
-    background-color: var(--accent-color);
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin-top: -60px;
-    position: relative; 
-    z-index: 15;
 }
 
 header nav {
@@ -58,11 +38,11 @@ header nav {
 }
 
 #header-menu-options {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    z-index: 30;
-    background-color: var(--header-footer-color); 
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  background-color: var(--header-color);  
 }
 
 #header-menu-options ul {
@@ -79,10 +59,15 @@ header nav {
 }
 
 #hero img {
+  width: 100%;
+}
+
+#overview {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   background-color: var(--accent-color);
   margin-top: -140px;
   opacity: 70%;
-  border: 1px solid black;
   border: 1px solid black;  
 }
 
@@ -91,6 +76,47 @@ header nav {
 }
 
 #overview h2 {
+  border-right: 2px solid black;
+  padding: 1rem;
+}
+
+#overview div {
+  padding: 1rem;
+}
+
+#park-menu ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 1rem;
+}
+
+#park-menu ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0px;
+  margin: 1rem;
+}
+
+#park-menu ul li svg {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+#park-menu {
+  background-color: var(--accent-color);
+  border: 1px solid black;
+}
+
+#park-menu ul li p {
+  text-decoration: underline;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+footer {
+  padding: 1rem;
   background-color: var(--header-color);
   color: white;
   border: 1px solid black;
@@ -100,20 +126,6 @@ header nav {
   display: none;
 }
 
-#parkMenu{
-    background-color: var(--accent-color);
-}
-
-#parkMenu ul{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: space-evenly;
-}
-svg{
-    width: 50px;
-    height: 50px;
-}
 #promotions {
   border: 1px solid black;
   background-color: #f3f1ea;
@@ -141,7 +153,7 @@ svg{
   padding: 1rem;
 }
 
-/* Important: this beats #map-modal display:flex */
+
 #map-modal.is-hidden {
   display: none;
 }
@@ -159,7 +171,4 @@ svg{
   background-color: white;
   cursor: pointer;
   margin-bottom: 0.5rem;
-  position: relative;
-  z-index:1010;
-  padding: 5px 10px;
 }
