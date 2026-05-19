@@ -27,16 +27,16 @@
       </header>
       <main>
         <section id="hero">
-          <img id="heroImage" src="/images/us-map.png" alt="Map of US" />
+          <img id="park-mage" src="/images/us-map.png" alt="Map of US" />
         </section>
-        <section id="parkInfo">
+        <section id="overview">
           <h2 id="parkName">Park Name</h2>
           <div>
             <h2 id="parkType">Park Type</h2>
             <h2 id="parkStates">Park States</h2>
           </div>
         </section>
-        <section id="parkMenu">
+        <section id="park-menu">
           <ul>
             <li>
               <p>INFO</p>
@@ -75,6 +75,32 @@
         <section id="promotions">
           <h2>Park Promotions:</h2>
           <p id="promotion-message"></p>
+        </section>
+        <section id="park-info">
+          <h2>Park Info</h2>
+          <p><strong>Description:</strong> <span id="info-description">Loading...</span></p>
+          <p><strong>Weather:</strong> <span id="info-weather">Loading...</span></p>
+          <p>
+            <strong>Directions:</strong>
+            <span id="info-directions">Loading...</span>
+            <a id="info-directions-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+          </p>
+          <p><strong>Contact:</strong> <span id="info-contact">Loading...</span></p>
+          <p><strong>Address:</strong> <span id="info-address">Loading...</span></p>
+        </section>
+
+        <section id="park-fees" class="is-hidden">
+          <h2>Fees</h2>
+        
+          <h3>Entrance Fees</h3>
+          <ul id="fees-entrance-fees">
+            <li>Loading...</li>
+          </ul>
+        
+          <h3>Entrance Passes</h3>
+          <ul id="fees-entrance-passes">
+            <li>Loading...</li>
+          </ul>
         </section>
         <section id="map-modal" class="is-hidden">
           <div id="map-modal-content">

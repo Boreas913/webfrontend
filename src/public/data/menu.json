@@ -1,0 +1,9 @@
+{
+  "menu": [
+    { "id": "info", "name": "INFO", "iconUrl": "/images/sprite.svg#info", "href": "#info" },
+    { "id": "alerts", "name": "ALERTS", "iconUrl": "/images/sprite.svg#safety-caution-alerts", "href": "#alerts" },
+    { "id": "maps", "name": "MAPS", "iconUrl": "/images/sprite.svg#location_on", "href": "#maps" },
+    { "id": "events", "name": "EVENTS", "iconUrl": "/images/sprite.svg#event", "href": "#events" },
+    { "id": "fees", "name": "FEES", "iconUrl": "/images/sprite.svg#passes-and-fees", "href": "#fees" }
+  ]
+}
