@@ -172,3 +172,42 @@ footer {
   cursor: pointer;
   margin-bottom: 0.5rem;
 }
+#park-info,
+#park-fees {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+#park-info h2,
+#park-info h3,
+#park-fees h2,
+#park-fees h3 {
+  margin: 0 0 0.5rem;
+}
+
+#park-info p,
+#park-fees p {
+  margin: 0.35rem 0;
+  line-height: 1.4;
+}
+
+#park-info ul,
+#park-fees ul {
+  margin: 0.25rem 0 0.75rem 1.1rem;
+  padding: 0;
+}
+
+#park-info li,
+#park-fees li {
+  margin: 0.25rem 0;
+}
+
+#park-info a,
+#park-fees a {
+  margin-left: 0.35rem;
+  text-decoration: underline;
+  word-break: break-word;
+}
