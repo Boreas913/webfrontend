@@ -2,12 +2,6 @@ const MENU_DATA_URL = "./data/menu.json";
 const NPS_PARK_URL = "https://developer.nps.gov/api/v1/parks";
 const NPS_API_KEY = import.meta.env.VITE_NPS_API_KEY;
 
-function updateOverviewFromParkData(park) {
-  document.getElementById("parkName").textContent = park.name;
-  document.getElementById("parkType").textContent = park.type;
-  document.getElementById("parkStates").textContent = park.states;
-}
-
 async function fetchParkData(parkCode = "yell") {
   const response = await fetch(`${NPS_PARK_URL}?parkCode=${parkCode}`, {
     headers: {
@@ -28,7 +22,7 @@ function renderParkInfoDetails(park) {
   directionsLink.href = park.directionsUrl;
   directionsLink.textContent = "Read more";
 
-  const primaryContact = park.contacts[0].phoneNumbers[0]; // Assuming the first contact and first phone number is the primary one
+  const primaryContact = park.contacts.phoneNumbers[0]; // Assuming the first contact and first phone number is the primary one
   document.getElementById("info-contact").textContent = primaryContact.phoneNumber;
 
   const physicalAddress = park.addresses[0]; // Assuming the first address is the physical one
@@ -70,13 +64,6 @@ function updateOverviewFromParkData(park) {
 
   parkImage.src = park.images[0].url;
   parkImage.alt = park.images[0].altText || park.images[0].title;
-}
-
-async function loadAndRenderParkInfo() {
-  const park = await fetchParkData();
-  updateOverviewFromParkData(park);
-  renderParkInfoDetails(park);
-  renderParkFeesSection(park);
 }
 
 function loadParkData() {
@@ -141,21 +128,6 @@ async function buildParkMenuWithAsyncAwait() {
       `
     )
     .join("");
-}
-
-function setActiveSection(section) {
-  const infoSection = document.getElementById("park-info");
-  const feesSection = document.getElementById("park-fees");
-
-  const showInfo = section === "info";
-  if (infoSection) infoSection.classList.toggle("is-hidden", !showInfo);
-  if (feesSection) feesSection.classList.toggle("is-hidden", showInfo);
-}
-
-function resolveMenuIdFromClickTarget(target) {
-  const li = target.closest("li");
-  if (!li || !li.dataset.menuId) return null; 
-  return li.dataset.menuId.trim().toLowerCase();
 }
 
 function setActiveSection(section) {
