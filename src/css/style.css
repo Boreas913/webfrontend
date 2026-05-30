@@ -211,3 +211,83 @@ footer {
   text-decoration: underline;
   word-break: break-word;
 }
+#choose-park-container {
+  display: flex;
+  flex-direction: column;   /* stack button and select */
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+#choose-park-btn {
+  cursor: pointer;
+  font: inherit;                     /* match site typography */
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: white;
+  background-color: var(--header-color);
+  border: 1px solid #1f2f27;
+  border-radius: 6px;
+  padding: 0.5rem 0.85rem;
+}
+
+#choose-park-btn:hover {
+  background-color: #2b4035;
+}
+
+#choose-park-btn:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+#choose-park-select {
+  min-width: 220px;
+  max-width: 100%;
+  padding: 0.4rem 0.5rem;
+  font: inherit;                     /* match site typography */
+  color: #1f2f27;
+  border: 1px solid #9ca59a;
+  border-radius: 4px;
+  background: #fff;
+}
+
+#favorites-section {
+  background-color: var(--header-color);
+  color: white;
+  padding: 0.5rem 1rem 0.9rem;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#favorites-section a,
+#favorites-section .favorite-remove {
+  color: white;
+}
+
+.favorites-inner h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.favorites-list {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.favorites-list li {
+  margin: 0.15rem 0;
+}
+
+.favorite-remove {
+  margin-left: 0.4rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-decoration: underline;
+}
+
+.is-hidden {
+  display: none !important;
+}
