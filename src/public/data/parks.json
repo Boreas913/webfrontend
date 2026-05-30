@@ -1,0 +1,208 @@
+{
+  "parkNames": [
+    {
+      "name": "Acadia",
+      "parkCode": "acad"
+    },
+    {
+      "name": "Arches",
+      "parkCode": "arch"
+    },
+    {
+      "name": "Badlands",
+      "parkCode": "badl"
+    },
+    {
+      "name": "Big Bend",
+      "parkCode": "bibe"
+    },
+    {
+      "name": "Biscayne",
+      "parkCode": "bisc"
+    },
+    {
+      "name": "Black Canyon Of The Gunnison",
+      "parkCode": "blca"
+    },
+    {
+      "name": "Bryce Canyon",
+      "parkCode": "brca"
+    },
+    {
+      "name": "Canyonlands",
+      "parkCode": "cany"
+    },
+    {
+      "name": "Capitol Reef",
+      "parkCode": "care"
+    },
+    {
+      "name": "Carlsbad Caverns",
+      "parkCode": "cave"
+    },
+    {
+      "name": "Channel Islands",
+      "parkCode": "chis"
+    },
+    {
+      "name": "Congaree",
+      "parkCode": "cong"
+    },
+    {
+      "name": "Crater Lake",
+      "parkCode": "crla"
+    },
+    {
+      "name": "Cuyahoga Valley",
+      "parkCode": "cuva"
+    },
+    {
+      "name": "Death Valley",
+      "parkCode": "deva"
+    },
+    {
+      "name": "Dry Tortugas",
+      "parkCode": "drto"
+    },
+    {
+      "name": "Everglades",
+      "parkCode": "ever"
+    },
+    {
+      "name": "Gateway Arch",
+      "parkCode": "jeff"
+    },
+    {
+      "name": "Glacier",
+      "parkCode": "glac"
+    },
+    {
+      "name": "Grand Canyon",
+      "parkCode": "grca"
+    },
+    {
+      "name": "Grand Teton",
+      "parkCode": "grte"
+    },
+    {
+      "name": "Great Basin",
+      "parkCode": "grba"
+    },
+    {
+      "name": "Great Smoky Mountains",
+      "parkCode": "grsm"
+    },
+    {
+      "name": "Guadalupe Mountains",
+      "parkCode": "gumo"
+    },
+    {
+      "name": "Haleakalā",
+      "parkCode": "hale"
+    },
+    {
+      "name": "Hawaiʻi Volcanoes",
+      "parkCode": "havo"
+    },
+    {
+      "name": "Hot Springs",
+      "parkCode": "hosp"
+    },
+    {
+      "name": "Indiana Dunes",
+      "parkCode": "indu"
+    },
+    {
+      "name": "Isle Royale",
+      "parkCode": "isro"
+    },
+    {
+      "name": "Joshua Tree",
+      "parkCode": "jotr"
+    },
+    {
+      "name": "Kenai Fjords",
+      "parkCode": "kefj"
+    },
+    {
+      "name": "Kobuk Valley",
+      "parkCode": "kova"
+    },
+    {
+      "name": "Lassen Volcanic",
+      "parkCode": "lavo"
+    },
+    {
+      "name": "Mammoth Cave",
+      "parkCode": "maca"
+    },
+    {
+      "name": "Mesa Verde",
+      "parkCode": "meve"
+    },
+    {
+      "name": "Mount Rainier",
+      "parkCode": "mora"
+    },
+    {
+      "name": "North Cascades",
+      "parkCode": "noca"
+    },
+    {
+      "name": "Olympic",
+      "parkCode": "olym"
+    },
+    {
+      "name": "Petrified Forest",
+      "parkCode": "pefo"
+    },
+    {
+      "name": "Pinnacles",
+      "parkCode": "pinn"
+    },
+    {
+      "name": "Rocky Mountain",
+      "parkCode": "romo"
+    },
+    {
+      "name": "Saguaro",
+      "parkCode": "sagu"
+    },
+    {
+      "name": "Shenandoah",
+      "parkCode": "shen"
+    },
+    {
+      "name": "Theodore Roosevelt",
+      "parkCode": "thro"
+    },
+    {
+      "name": "Virgin Islands",
+      "parkCode": "viis"
+    },
+    {
+      "name": "Voyageurs",
+      "parkCode": "voya"
+    },
+    {
+      "name": "White Sands",
+      "parkCode": "whsa"
+    },
+    {
+      "name": "Wind Cave",
+      "parkCode": "wica"
+    },
+    {
+      "name": "Yellowstone",
+      "parkCode": "yell"
+    },
+    {
+      "name": "Yosemite",
+      "parkCode": "yose"
+    },
+    {
+      "name": "Zion",
+      "parkCode": "zion"
+    }
+  ]
+}
