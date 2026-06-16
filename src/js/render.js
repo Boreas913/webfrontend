@@ -1,7 +1,8 @@
 import { readFavorites, removeFavorite } from "./storage.js";
-const PARK_IMAGE_BASE_PATH = "/images/parks";
+const PARK_IMAGE_BASE_PATH = "./images/parks";
 const PARK_IMAGE_FALLBACK = `${PARK_IMAGE_BASE_PATH}/placeholder.jpg`;
-
+//There is a placeholder in the HTML that holds this image. The Javascript replaces it with the 
+//real image.
 function setParkImage(park, parkImageEl) {
   if (!parkImageEl) return;
 
@@ -28,7 +29,7 @@ export function renderParkData(park) {
   const parkStates = document.getElementById("parkStates");
   const parkImage = document.getElementById("park-image");
 
-  parkName.textContent = park.name;
+  parkName.textContent = park.fullName ?? park.name;
   parkType.textContent = park.designation;
   parkStates.textContent = park.states;
   setParkImage(park, parkImage);
