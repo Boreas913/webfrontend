@@ -4,6 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NPS PARK DEMO SITE</title>
+    <title>US National Parks Explorer | WDD 231</title>
+    <meta
+      name="description"
+      content="Explore U.S. National Parks with park details, alerts, events, maps, and visitor information."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://your-domain.example/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="US National Parks Explorer | WDD 231" />
+    <meta
+      property="og:description"
+      content="Discover U.S. National Parks with maps, alerts, weather, and park information."
+    />
+    <meta property="og:url" content="https://your-domain.example/" />
+    <meta property="og:image" content="https://your-domain.example/images/us-map.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="US National Parks Explorer | WDD 231" />
+    <meta
+      name="twitter:description"
+      content="Discover U.S. National Parks with maps, alerts, weather, and park information."
+    />
+    <meta name="twitter:image" content="https://your-domain.example/images/us-map.jpg" />
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TouristAttraction",
+          "name": "US National Parks Explorer",
+          "description": "A student project for exploring U.S. National Parks."
+        }
+    </script>
     <link rel="stylesheet" href="./css/style.css" />
     <script type="module" src="./js/main.js" defer></script>
   </head>
@@ -141,8 +173,49 @@
             </iframe>
           </div>
         </section>
+        <section
+          id="feedback-modal"
+          class="is-hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="feedback-modal-title"
+          aria-hidden="true"
+          >
+          <div id="feedback-modal-content">
+            <button id="feedback-modal-close" type="button" aria-label="Close feedback dialog">
+              X
+            </button>
+          
+            <h2 id="feedback-modal-title">Feedback</h2>
+          
+            <div id="feedback-form-view">
+              <form id="feedback-form" novalidate>
+                <label for="feedback-name">Name</label>
+                <input id="feedback-name" name="name" type="text" autocomplete="name" required />
+              
+                <label for="feedback-email">E-mail</label>
+                <input id="feedback-email" name="email" type="email" autocomplete="email" required />
+              
+                <label for="feedback-message">Feedback</label>
+                <textarea id="feedback-message" name="feedback" rows="6" required></textarea>
+              
+                <p id="feedback-error" class="form-error" aria-live="polite"></p>
+              
+                <button class="feedback-submit-btn" type="submit">
+                  Send Your Feedback
+                 </button>
+              </form>
+           </div>
+
+           <div id="feedback-thanks" class="is-hidden">
+             <p>Thank you for your feedback!</p>
+             <button id="feedback-thanks-close" type="button">Close</button>
+           </div>
+          </div>
+        </section>
       </main>
       <footer>
+        <a id="footer-feedback-link" href="#">Feedback</a>
         <p>&copy; 2026 WDD 231 Sample Project</p>
       </footer>
     </div>
